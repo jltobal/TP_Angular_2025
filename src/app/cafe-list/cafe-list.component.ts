@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Cafe } from './Cafe';
 
 @Component({
   selector: 'app-cafe-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cafe-list.component.html',
   styleUrl: './cafe-list.component.css'
 })
@@ -15,7 +16,7 @@ export class CafeListComponent {
     variety : "Brasil",
     type : "Arabiga",
     price : 14200,
-    size: "250gr",
+    size: "250gr", 
     stock:  293,
     image : "assets/img/bra_1.jpg"
     },
