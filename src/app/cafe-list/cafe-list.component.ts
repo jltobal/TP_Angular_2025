@@ -18,7 +18,7 @@ export class CafeListComponent {
     price : 14200,
     size: "250gr", 
     stock:  293,
-    image : "../assets/bra_1.jpg"
+    image: "assets/bra_1.jpg"
     },
     {
     variety : "Colombia",
