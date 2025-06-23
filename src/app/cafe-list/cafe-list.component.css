@@ -34,9 +34,28 @@ tr:hover {
 }
 
 td img {
-  width: 40px;
+  /* CAMBIOS AQUI */
+  width: 100%;
+  max-width: 200px;
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 4px;
+  padding: 5px;
+}
+
+
+@media (max-width: 768px) {
+  td img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  td img {
+    max-width: 80px;
+  }
+  th, td {
+    padding: 8px;
+  }
 }
