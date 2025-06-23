@@ -1,20 +1,22 @@
-<table>
+<div class="cafe-list-container">
+  <table>
     <thead>
-        <tr>
-            <th>Imagen</th>
-            <th>Origen</th>
-            <th>Tipo</th>
-            <Th>Tamaño</Th>
-            <th>Precio</th>
-        </tr>
+      <tr>
+        <th>Imagen</th>
+        <th>Origen</th>
+        <th>Tipo</th>
+        <th>Tamaño</th>
+        <th>Precio</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let cafe of cafes">
-            <td><img [src]="cafe.image"></td>
-            <td>{{cafe.variety}}</td>
-            <td>{{cafe.type}}</td>
-            <td>{{cafe.size}}</td>
-            <td>{{cafe.price}}</td>
-        </tr>
+      <tr *ngFor="let cafe of cafes">
+        <td><img [src]="cafe.image"></td>
+        <td>{{cafe.variety}}</td>
+        <td>{{cafe.type}}</td>
+        <td>{{cafe.size}}</td>
+        <td>{{cafe.price}}</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</div>

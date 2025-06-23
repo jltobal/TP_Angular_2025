@@ -18,15 +18,31 @@ export class CafeListComponent {
     price : 14200,
     size: "250gr", 
     stock:  293,
-    image : "assets/img/bra_1.jpg"
+    image : "../assets/bra_1.jpg"
     },
     {
     variety : "Colombia",
-    type : "Arabiga",
+    type : "Excelsa",
     price : 15300,
     size: "250gr",
     stock:  130,
-    image : "assets/img/col_1.jpg"
+    image : "assets/img/bra_1.jpg"
+    },
+     {
+    variety : "Honduras",
+    type : "Arabiga",
+    price : 18200,
+    size: "250gr",
+    stock:  98,
+    image : "assets/img/bra_1.jpg"
+    },
+     {
+    variety : "Costa Rica",
+    type : "Robusta",
+    price : 21500,
+    size: "250gr",
+    stock:  75,
+    image : "assets/img/bra_1.jpg"
     }
 ]
 
