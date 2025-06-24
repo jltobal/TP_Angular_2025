@@ -18,7 +18,8 @@ export class CafeListComponent {
     price : 14200,
     size: "250gr", 
     stock:  293,
-    image: "img/bra_1.jpg"
+    image: "img/bra_1.jpg",
+    clearance : false,
     },
     {
     variety : "Colombia",
@@ -26,7 +27,8 @@ export class CafeListComponent {
     price : 15300,
     size: "250gr",
     stock:  130,
-    image : "img/col_1.jpg"
+    image : "img/col_1.jpg",
+    clearance : true,
     },
      {
     variety : "Honduras",
@@ -34,15 +36,17 @@ export class CafeListComponent {
     price : 18200,
     size: "250gr",
     stock:  98,
-    image : "img/honduras_1.jpg"
+    image : "img/honduras_1.jpg",
+    clearance : false,
     },
      {
     variety : "Costa Rica",
     type : "Robusta",
     price : 21500,
     size: "250gr",
-    stock:  75,
-    image : "img/Crica_1.jpg"
+    stock:  28,
+    image : "img/Crica_1.jpg",
+    clearance : false,
     }
 ]
 

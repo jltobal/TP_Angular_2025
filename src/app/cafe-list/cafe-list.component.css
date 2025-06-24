@@ -44,6 +44,11 @@ td img {
   padding: 5px;
 }
 
+.clearance{
+  border: 2px solid yellow;
+  font-weight: 600;
+}
+
 
 @media (max-width: 768px) {
   td img {

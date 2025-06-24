@@ -4,5 +4,6 @@ export interface Cafe {
     "price" : number;
     "size": string;
     "stock": number;
-    "image" : string
+    "image" : string;
+    "clearance" : boolean
 }

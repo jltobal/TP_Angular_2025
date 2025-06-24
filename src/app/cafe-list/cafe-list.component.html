@@ -10,12 +10,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let cafe of cafes">
+      <tr *ngFor="let cafe of cafes" [ngClass]="{'clearance' : cafe.clearance}">
         <td><img [src]="cafe.image"></td>
         <td>{{cafe.variety}}</td>
         <td>{{cafe.type}}</td>
         <td>{{cafe.size}}</td>
-        <td>{{cafe.price}}</td>
+        <td *ngIf="cafe.stock > 10; else sinstock">{{cafe.price}}</td>
+        <ng-template #sinstock><td><span>Sin Stock</span></td></ng-template>
       </tr>
     </tbody>
   </table>
