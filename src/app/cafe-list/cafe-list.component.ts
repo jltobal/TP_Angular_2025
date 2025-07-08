@@ -20,6 +20,7 @@ export class CafeListComponent {
     stock:  293,
     image: "img/bra_1.jpg",
     clearance : false,
+    quantity: 0,
     },
     {
     variety : "Colombia",
@@ -29,6 +30,7 @@ export class CafeListComponent {
     stock:  130,
     image : "img/col_1.jpg",
     clearance : true,
+    quantity: 0,
     },
      {
     variety : "Honduras",
@@ -38,6 +40,7 @@ export class CafeListComponent {
     stock:  98,
     image : "img/honduras_1.jpg",
     clearance : false,
+    quantity: 0,
     },
      {
     variety : "Costa Rica",
@@ -47,7 +50,21 @@ export class CafeListComponent {
     stock:  28,
     image : "img/Crica_1.jpg",
     clearance : false,
+    quantity: 0,
     }
 ]
 
+downQuantity(cafe : Cafe) : void{
+  if(cafe.quantity > 0){
+    cafe.quantity --;
+  }
 }
+
+upQuantity(cafe : Cafe) : void{
+  if(cafe.quantity < cafe.stock){
+    cafe.quantity ++;
+  }
+}
+
+}
+

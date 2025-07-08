@@ -7,6 +7,7 @@
         <th>Tipo</th>
         <th>Tamaño</th>
         <th>Precio</th>
+        <th>Comprar</th>
       </tr>
     </thead>
     <tbody>
@@ -15,8 +16,13 @@
         <td>{{cafe.variety}}</td>
         <td>{{cafe.type}}</td>
         <td>{{cafe.size}}</td>
-        <td *ngIf="cafe.stock > 10; else sinstock">{{cafe.price}}</td>
+        <td *ngIf="cafe.stock > 10; else sinstock">{{cafe.price | currency }}</td>
         <ng-template #sinstock><td><span>Sin Stock</span></td></ng-template>
+        <td>
+          <button (click)="downQuantity(cafe)" >-</button>
+          {{cafe.quantity}}
+          <button  (click)="upQuantity(cafe)" >+</button>
+        </td>
       </tr>
     </tbody>
   </table>
