@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Cafe } from './Cafe';
 
 @Component({
   selector: 'app-cafe-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,
+            FormsModule,
+  ],
   templateUrl: './cafe-list.component.html',
   styleUrl: './cafe-list.component.css'
 })
@@ -64,6 +67,10 @@ upQuantity(cafe : Cafe) : void{
   if(cafe.quantity < cafe.stock){
     cafe.quantity ++;
   }
+}
+
+changeQuantity(event: any, cafe:Cafe){
+  console.log(event);
 }
 
 }
