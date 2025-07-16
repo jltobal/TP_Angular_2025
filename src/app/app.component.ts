@@ -2,11 +2,16 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CafeListComponent } from './cafe-list/cafe-list.component';
 import { CafeCartComponent } from "./cafe-cart/cafe-cart.component";
+import { CafeTypesComponent } from "./cafe-types/cafe-types.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,
-    CafeListComponent, CafeCartComponent],
+            RouterLink,
+            CafeListComponent, 
+            CafeCartComponent, 
+            CafeTypesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
