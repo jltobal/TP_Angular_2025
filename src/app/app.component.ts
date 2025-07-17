@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { CafeListComponent } from './cafe-list/cafe-list.component';
 import { CafeCartComponent } from "./cafe-cart/cafe-cart.component";
 import { CafeTypesComponent } from "./cafe-types/cafe-types.component";
+import { InputNumberComponent } from './input-number/input-number.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -11,7 +12,8 @@ import { RouterLink } from '@angular/router';
             RouterLink,
             CafeListComponent, 
             CafeCartComponent, 
-            CafeTypesComponent],
+            CafeTypesComponent,
+            InputNumberComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
