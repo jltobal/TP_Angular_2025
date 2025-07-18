@@ -1,9 +1,9 @@
 <div class="input-group">
-  <button (click)="downQuantity(cafe)">-</button>
+  <button (click)="downQuantity(quantity)">-</button>
   <input
     type="number"
-    [(ngModel)]="cafe.quantity"
-    (keyup)="changeQuantity($event, cafe)"
+    [(ngModel)]="quantity"
+    (keyup)="changeQuantity($event, quantity)"
   />
-  <button (click)="upQuantity(cafe)">+</button>
+  <button (click)="upQuantity(quantity, max)">+</button>
 </div>

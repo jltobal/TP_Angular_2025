@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Cafe } from '../cafe-list/Cafe';
 import { FormsModule } from '@angular/forms';
+import { max } from 'rxjs';
 
 @Component({
   selector: 'app-input-number',
@@ -12,23 +13,37 @@ export class InputNumberComponent {
   constructor() {}
 
   @Input()
-  cafe!: Cafe;
+  quantity!: number;
+
+  @Input()
+  max!: number;
+
+  @Output()
+  quantityChange: EventEmitter<number> = new EventEmitter<number>();
+
+  @Output()
+  maxReached: EventEmitter<number> = new EventEmitter<number>();
 
   ngOnInit(): void {}
 
-  downQuantity(cafe: Cafe): void {
-    if (cafe.quantity > 0) {
-      cafe.quantity--;
+  downQuantity(quantity: number): void {
+    if (this.quantity > 0) {
+      this.quantity--;
+      this.quantityChange.emit(this.quantity);
     }
   }
 
-  upQuantity(cafe: Cafe): void {
-    if (cafe.quantity < cafe.stock) {
-      cafe.quantity++;
+  upQuantity(quantity: number, max: number): void {
+    if (this.quantity < max) {
+      this.quantity++;
+      this.quantityChange.emit(this.quantity);
+    } else {
+      this.maxReached.emit(max);
     }
   }
 
-  changeQuantity(event: any, cafe: Cafe) {
+  changeQuantity(event: any, quantity: number) {
     console.log(event);
+    this.quantityChange.emit(this.quantity);
   }
 }
