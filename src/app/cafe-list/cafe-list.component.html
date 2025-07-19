@@ -25,6 +25,9 @@
         <td>
           <app-input-number [(quantity)]="cafe.quantity" [max]="cafe.stock">
           </app-input-number>
+          <button class="btn_add_cart" (click)="addToCart(cafe)">
+            Agregar al carrito
+          </button>
         </td>
       </tr>
     </tbody>

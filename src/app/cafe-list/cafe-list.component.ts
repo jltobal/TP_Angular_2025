@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Cafe } from './Cafe';
 import { InputNumberComponent } from '../input-number/input-number.component';
+import { CafeCartService } from '../cafe-cart.service';
 
 @Component({
   selector: 'app-cafe-list',
@@ -12,6 +13,8 @@ import { InputNumberComponent } from '../input-number/input-number.component';
   styleUrl: './cafe-list.component.css',
 })
 export class CafeListComponent {
+  constructor(private cart: CafeCartService) {}
+
   cafes: Cafe[] = [
     {
       variety: 'Brasil',
@@ -54,4 +57,10 @@ export class CafeListComponent {
       quantity: 0,
     },
   ];
+
+  addToCart(cafe: Cafe): void {
+    this.cart.addToCart(cafe);
+    cafe.stock -= cafe.quantity;
+    cafe.quantity = 0;
+  }
 }
