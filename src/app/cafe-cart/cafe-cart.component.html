@@ -1,6 +1,6 @@
 <h3>Carrito de Compras</h3>
 <ul>
-  @for (cafe of cartList; track cafe.variety){
+  @for (cafe of cartList$ | async; track cafe.variety){
   <li>{{ cafe.variety }} - {{ cafe.quantity }}</li>
   }
 </ul>
