@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Cafe } from './Cafe';
 import { InputNumberComponent } from '../input-number/input-number.component';
 import { CafeCartService } from '../cafe-cart.service';
+import { CafeDataService } from '../cafe-data.service';
 
 @Component({
   selector: 'app-cafe-list',
@@ -13,7 +14,10 @@ import { CafeCartService } from '../cafe-cart.service';
   styleUrl: './cafe-list.component.css',
 })
 export class CafeListComponent {
-  constructor(private cart: CafeCartService) {}
+  constructor(
+    private cart: CafeCartService,
+    private cafeDataService: CafeDataService
+  ) {}
 
   cafes: Cafe[] = [
     {
