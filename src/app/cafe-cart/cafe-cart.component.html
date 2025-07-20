@@ -1,1 +1,6 @@
-<p>cafe-cart works!</p>
+<h3>Carrito de Compras</h3>
+<ul>
+  @for (cafe of cartList; track cafe.variety){
+  <li>{{ cafe.variety }} - {{ cafe.quantity }}</li>
+  }
+</ul>

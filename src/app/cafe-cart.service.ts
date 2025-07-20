@@ -20,5 +20,6 @@ export class CafeCartService {
     } else {
       item.quantity += cafe.quantity;
     }
+    this.cartList.next(this._cartList);
   }
 }
