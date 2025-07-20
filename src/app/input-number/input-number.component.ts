@@ -43,7 +43,12 @@ export class InputNumberComponent {
   }
 
   changeQuantity(event: any, quantity: number) {
-    console.log(event);
+    if (isNaN(this.quantity) || this.quantity < 0) {
+      this.quantity = 0;
+    } else if (this.quantity > this.max) {
+      this.quantity = this.max;
+    }
+
     this.quantityChange.emit(this.quantity);
   }
 }

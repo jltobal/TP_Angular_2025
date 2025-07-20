@@ -16,7 +16,7 @@
         <td>{{ cafe.name }}</td>
         <td>{{ cafe.type }}</td>
         <td>{{ cafe.size }}</td>
-        <td *ngIf="cafe.stock > 10; else sinstock">
+        <td *ngIf="cafe.stock > 0; else sinstock">
           {{ cafe.price | currency }}
         </td>
         <ng-template #sinstock
