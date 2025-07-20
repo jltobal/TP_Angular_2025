@@ -37,3 +37,9 @@ Este proyecto es una aplicación web desarrollada con Angular, creada como parte
 
 Puedes explorar y editar el proyecto directamente en StackBlitz a través del siguiente enlace:
 [Enlace a StackBlitz aquí] (Por favor, reemplaza este texto con el enlace real de StackBlitz)
+
+## Datos
+Joaquin Tobal
+DNI: 36215299
+e-mail: ziba.tobal@gmail.com
+Sede: Tandil
