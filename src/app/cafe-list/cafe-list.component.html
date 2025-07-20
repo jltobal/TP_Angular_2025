@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th>Imagen</th>
-        <th>Origen</th>
+        <th>Nombre</th>
         <th>Tipo</th>
         <th>Tamaño</th>
         <th>Precio</th>
@@ -13,7 +13,7 @@
     <tbody>
       <tr *ngFor="let cafe of cafes" [ngClass]="{ clearance: cafe.clearance }">
         <td><img [src]="cafe.image" /></td>
-        <td>{{ cafe.variety }}</td>
+        <td>{{ cafe.name }}</td>
         <td>{{ cafe.type }}</td>
         <td>{{ cafe.size }}</td>
         <td *ngIf="cafe.stock > 10; else sinstock">

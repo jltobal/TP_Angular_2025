@@ -1,10 +1,11 @@
 export interface Cafe {
-    "variety" : string;
-    "type" : string;
-    "price" : number;
-    "size": string;
-    "stock": number;
-    "image" : string;
-    "clearance" : boolean
-    "quantity" : number
+  name: string;
+  variety: string;
+  price: number;
+  type: string;
+  size: string;
+  image: string;
+  stock: number;
+  clearance: boolean;
+  quantity: number;
 }
